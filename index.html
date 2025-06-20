@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -6,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WoodsOcean - Trợ lý SAP B1 thông minh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,7 +18,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Be Vietnam Pro", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #2c3e50;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -183,8 +187,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
         }
 
         .hero-content {
@@ -195,6 +206,7 @@
         .hero h2 {
             font-size: 2.5rem;
             font-weight: bold;
+            margin-top: 20px;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
@@ -324,30 +336,6 @@
             bottom: 20px;
             right: 20px;
             z-index: 999;
-            flex-direction: column;
-            gap: 15px;
-            align-items: flex-end;
-        }
-
-        .scroll-to-top {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            color: #667eea;
-            font-size: 20px;
-        }
-
-        .scroll-to-top:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .floating-chatbot {
@@ -386,9 +374,17 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 255, 136, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0);
+            }
         }
 
         /* Mobile Chatbot Modal */
@@ -410,51 +406,74 @@
         }
 
         .mobile-chatbot-content {
-            background: white;
+            /* background: white; */
             width: 100%;
-            height: 80vh;
+            height: 95dvh;
             border-radius: 20px 20px 0 0;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+            /* box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2); */
             display: flex;
             flex-direction: column;
             animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            touch-action: pan-y;
         }
 
         @keyframes slideUp {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
         }
 
         .mobile-chatbot-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            /* background: #397DFF; */
+            background: transparent;
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .mobile-chatbot-header::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
         }
 
         .mobile-chatbot-header h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            margin-top: 8px;
         }
 
         .mobile-close-btn {
             background: rgba(255, 255, 255, 0.2);
             border: none;
             color: white;
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px;
             transition: background 0.3s ease;
+            margin-top: 8px;
         }
 
         .mobile-close-btn:hover {
@@ -464,6 +483,7 @@
         .mobile-chatbot-body {
             flex: 1;
             background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+            overflow: hidden;
         }
 
         /* Contact Section */
@@ -578,8 +598,16 @@
         }
 
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0.3;
+            }
         }
 
         /* Responsive Design */
@@ -614,7 +642,7 @@
             }
 
             .floating-chatbot-container {
-                display: flex;
+                display: block;
             }
 
             .contact-grid {
@@ -662,6 +690,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -715,9 +744,12 @@
         }
 
         @keyframes float-shape {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0px) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-20px) rotate(180deg);
             }
@@ -763,24 +795,17 @@
 
     <!-- Floating Chatbot Container -->
     <div class="floating-chatbot-container" id="floatingContainer">
-        <button class="scroll-to-top" onclick="scrollToTop()" id="scrollTopBtn" style="display: none;">
-            ↑
-        </button>
         <button class="floating-chatbot" onclick="toggleMobileChatbot()">
             💬
         </button>
     </div>
 
     <!-- Mobile Chatbot Modal -->
-    <div class="mobile-chatbot-modal" id="mobileChatbotModal">
-        <div class="mobile-chatbot-content">
-            <div class="mobile-chatbot-header">
-                <h3>
-                    🤖 Trợ lý SAP B1 thông minh
-                </h3>
-                <button class="mobile-close-btn" onclick="closeMobileChatbot()">
-                    ×
-                </button>
+    <div class="mobile-chatbot-modal" id="mobileChatbotModal" onclick="handleBackdropClick(event)">
+        <div class="mobile-chatbot-content" id="mobileChatbotContent">
+            <div class="mobile-chatbot-header" id="chatbotHeader">
+                <!-- <h3>🤖 Trợ lý SAP B1 thông minh</h3> -->
+                <!-- <button class="mobile-close-btn" onclick="closeMobileChatbot()">×</button> -->
             </div>
             <div class="mobile-chatbot-body" id="mobileVoiceflowChat">
                 <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #666;">
@@ -802,7 +827,8 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Trợ lý SAP Business One thông minh</h2>
-                <p>Hệ thống hỗ trợ AI giúp bạn sử dụng SAP B1 và các giải pháp tích hợp một cách hiệu quả nhất. Được thiết kế đặc biệt cho ngành chế biến gỗ và sản xuất nội thất của WoodsOcean.</p>
+                <p>Hệ thống hỗ trợ AI giúp bạn sử dụng SAP B1 và các giải pháp tích hợp một cách hiệu quả nhất. Được
+                    thiết kế đặc biệt cho ngành chế biến gỗ và sản xuất nội thất của WoodsOcean.</p>
                 <a href="#chatbot" class="cta-button">
                     <span class="status-indicator"></span>
                     💬 Bắt đầu trò chuyện
@@ -817,7 +843,8 @@
                 <h3>
                     📖 Hướng dẫn sử dụng
                 </h3>
-                <p>Trợ lý AI này được thiết kế để hỗ trợ bạn trong việc sử dụng SAP Business One và các giải pháp tích hợp cho ngành gỗ tại WoodsOcean.</p>
+                <p>Trợ lý AI này được thiết kế để hỗ trợ bạn trong việc sử dụng SAP Business One và các giải pháp tích
+                    hợp cho ngành gỗ tại WoodsOcean.</p>
 
                 <svg class="illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -858,7 +885,9 @@
 
                 <div class="warning">
                     <h4>⚠️ Lưu ý quan trọng:</h4>
-                    <p>Vui lòng chỉ hỏi những câu hỏi liên quan đến SAP B1, quy trình sản xuất gỗ, quản lý nội thất, và các gi ải pháp tích hợp của WoodsOcean. Tránh hỏi những chủ đề không liên quan như tin tức, giải trí, hoặc các vấn đề cá nhân.</p>
+                    <p>Vui lòng chỉ hỏi những câu hỏi liên quan đến SAP B1, quy trình sản xuất gỗ, quản lý nội thất, và
+                        các gi ải pháp tích hợp của WoodsOcean. Tránh hỏi những chủ đề không liên quan như tin tức, giải
+                        trí, hoặc các vấn đề cá nhân.</p>
                 </div>
 
                 <div class="guidelines">
@@ -933,31 +962,27 @@
         let lastScrollY = window.scrollY;
         const header = document.getElementById('header');
         let isMobileChatbotOpen = false;
+        let startY = 0;
+        let currentY = 0;
+        let isDragging = false;
 
         // Header auto hide/show on scroll
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
-            const scrollTopBtn = document.getElementById('scrollTopBtn');
-            
+
             if (currentScrollY < 50) {
-                // At top of page - always show
                 header.classList.remove('hidden');
                 header.classList.remove('scrolled');
-                if (scrollTopBtn) scrollTopBtn.style.display = 'none';
             } else {
-                // Not at top - add scrolled class
                 header.classList.add('scrolled');
-                if (scrollTopBtn) scrollTopBtn.style.display = 'block';
-                
+
                 if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                    // Scrolling down - hide header
                     header.classList.add('hidden');
                 } else {
-                    // Scrolling up - show header
                     header.classList.remove('hidden');
                 }
             }
-            
+
             lastScrollY = currentScrollY;
         });
 
@@ -972,21 +997,15 @@
             mobileMenu.classList.remove('active');
         }
 
-        // Scroll to top function
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
         // Mobile chatbot functions
         function toggleMobileChatbot() {
             const modal = document.getElementById('mobileChatbotModal');
             isMobileChatbotOpen = !isMobileChatbotOpen;
-            
+
             if (isMobileChatbotOpen) {
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
-                
-                // Initialize Voiceflow for mobile if not already done
+
                 if (!window.mobileVoiceflowLoaded) {
                     initializeMobileVoiceflow();
                 }
@@ -1003,10 +1022,51 @@
             isMobileChatbotOpen = false;
         }
 
+        // Handle backdrop click to close
+        function handleBackdropClick(event) {
+            if (event.target === event.currentTarget) {
+                closeMobileChatbot();
+            }
+        }
+
+        // Touch events for drag to close
+        const chatbotHeader = document.getElementById('chatbotHeader');
+        const chatbotContent = document.getElementById('mobileChatbotContent');
+
+        chatbotHeader.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+            isDragging = true;
+            chatbotContent.style.transition = 'none';
+        });
+
+        chatbotHeader.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+
+            currentY = e.touches[0].clientY;
+            const diffY = Math.max(0, currentY - startY);
+
+            chatbotContent.style.transform = `translateY(${diffY}px)`;
+        });
+
+        chatbotHeader.addEventListener('touchend', () => {
+            if (!isDragging) return;
+
+            const diffY = currentY - startY;
+            chatbotContent.style.transition = 'transform 0.3s ease';
+
+            if (diffY > 100) {
+                closeMobileChatbot();
+            } else {
+                chatbotContent.style.transform = 'translateY(0)';
+            }
+
+            isDragging = false;
+        });
+
         // Initialize mobile Voiceflow
         function initializeMobileVoiceflow() {
             if (window.mobileVoiceflowLoaded) return;
-            
+
             const script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
@@ -1022,20 +1082,15 @@
                         render: {
                             mode: 'embedded',
                             target: document.querySelector('#mobileVoiceflowChat')
+                        },
+                        launch: {
+                            hide: true
                         }
                     });
                     window.mobileVoiceflowLoaded = true;
                 }
             };
             document.head.appendChild(script);
-        }
-
-        // Smooth scrolling function
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
         }
 
         // Smooth scrolling for all anchor links
@@ -1071,11 +1126,11 @@
         });
 
         // Initialize desktop Voiceflow chatbot
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Desktop Voiceflow integration
-            (function(d, t) {
+            (function (d, t) {
                 var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-                v.onload = function() {
+                v.onload = function () {
                     window.voiceflow.chat.load({
                         verify: { projectID: '6853712c2de1b3a509f04ee2' },
                         url: 'https://general-runtime.voiceflow.com',
@@ -1089,8 +1144,8 @@
                         }
                     });
                 }
-                v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
-                v.type = "text/javascript"; 
+                v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+                v.type = "text/javascript";
                 s.parentNode.insertBefore(v, s);
             })(document, 'script');
 
@@ -1098,19 +1153,12 @@
         });
 
         // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const mobileMenu = document.getElementById('mobileMenu');
             const menuBtn = document.querySelector('.mobile-menu-btn');
-            
+
             if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
                 mobileMenu.classList.remove('active');
-            }
-        });
-
-        // Close mobile chatbot when clicking backdrop
-        document.getElementById('mobileChatbotModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeMobileChatbot();
             }
         });
     </script>
